@@ -13,6 +13,16 @@
     --border-color: #e5e7eb;
     --white: #ffffff;
     --hover-color: #1d4ed8;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    
+    /* Consistent spacing variables */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-2xl: 4rem;
 }
 
 body {
@@ -32,7 +42,7 @@ body {
 nav {
     background-color: var(--white);
     border-bottom: 1px solid var(--border-color);
-    padding: 1rem 0;
+    padding: var(--spacing-sm) 0;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -56,7 +66,8 @@ nav {
 
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: var(--spacing-lg);
+    align-items: center;
 }
 
 .nav-links a {
@@ -70,11 +81,24 @@ nav {
     color: var(--primary-color);
 }
 
+.nav-links .resume-link {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.5rem 1.25rem;
+    border-radius: 6px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.nav-links .resume-link:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-2px);
+}
+
 /* Menu Bar */
 .menu-bar {
     background-color: var(--bg-light);
     border-bottom: 1px solid var(--border-color);
-    padding: 1rem 0;
+    padding: var(--spacing-sm) 0;
     text-align: center;
     position: sticky;
     top: 65px;
@@ -84,7 +108,7 @@ nav {
 .menu-bar a {
     color: var(--text-dark);
     text-decoration: none;
-    padding: 0.5rem 1.5rem;
+    padding: var(--spacing-xs) var(--spacing-md);
     margin: 0 0.25rem;
     font-weight: 500;
     transition: color 0.2s;
@@ -96,14 +120,14 @@ nav {
 
 /* Hero Section */
 .hero {
-    padding: 4rem 0;
+    padding: var(--spacing-2xl) 0;
     background-color: var(--white);
 }
 
 .profile-section {
     display: grid;
     grid-template-columns: 250px 1fr;
-    gap: 3rem;
+    gap: var(--spacing-xl);
     align-items: start;
 }
 
@@ -115,25 +139,48 @@ nav {
 
 .profile-text h1 {
     font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--spacing-xs);
     color: var(--text-dark);
 }
 
 .subtitle {
     font-size: 1.25rem;
     color: var(--text-light);
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--spacing-md);
 }
 
 .profile-text p {
-    margin-bottom: 1rem;
+    margin-bottom: var(--spacing-sm);
     color: var(--text-light);
     line-height: 1.8;
 }
 
+.hero-cta {
+    margin-top: var(--spacing-lg);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.875rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+}
+
+.cta-button:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
+}
+
 /* Sections */
 section {
-    padding: 4rem 0;
+    padding: var(--spacing-2xl) 0;
 }
 
 section:nth-child(even) {
@@ -145,38 +192,53 @@ h2 {
     margin-bottom: 2.5rem;
     color: var(--text-dark);
     border-bottom: 2px solid var(--primary-color);
-    padding-bottom: 0.5rem;
+    padding-bottom: var(--spacing-xs);
 }
 
 h3 {
     font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--spacing-md);
     color: var(--text-dark);
 }
 
-/* Project Category */
+/* Project Category - Using flexbox with gap for consistent spacing */
 .project-category {
-    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.project-category:last-child {
+    margin-bottom: 0;
 }
 
 .category-title {
     color: var(--primary-color);
     font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.5rem;
+    padding-bottom: var(--spacing-xs);
     border-bottom: 1px solid var(--border-color);
 }
 
-/* Project Cards */
+/* In-Process Projects Styling */
+.project-category.in-process .category-title {
+    color: var(--warning-color);
+}
+
+.project-category.in-process .project-card {
+    border-color: var(--warning-color);
+    background: linear-gradient(to right, #fffbeb 0%, var(--white) 100%);
+}
+
+/* Project Cards - Removed margin-bottom, using gap from parent */
 .project-card {
     background-color: var(--white);
     border: 1px solid var(--border-color);
     border-radius: 8px;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
+    padding: var(--spacing-md);
     display: grid;
     grid-template-columns: 200px 1fr;
-    gap: 1.5rem;
+    gap: var(--spacing-md);
     transition: box-shadow 0.3s, transform 0.3s;
 }
 
@@ -209,7 +271,7 @@ h3 {
     font-size: 0.9rem;
     font-style: italic;
     color: var(--primary-color);
-    margin-bottom: 1rem;
+    margin-bottom: var(--spacing-sm);
 }
 
 .project-link {
@@ -225,13 +287,97 @@ h3 {
     text-decoration: underline;
 }
 
-/* Experience Items */
+/* Publications Section */
+#publications .container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.publication-item {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: var(--spacing-md);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.publication-item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+.pub-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: var(--spacing-xs);
+    gap: var(--spacing-sm);
+}
+
+.pub-header h4 {
+    font-size: 1.15rem;
+    color: var(--text-dark);
+    flex: 1;
+}
+
+.pub-badge {
+    background-color: var(--success-color);
+    color: var(--white);
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.journal {
+    color: var(--primary-color);
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: var(--spacing-xs);
+}
+
+.pub-description {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-sm);
+}
+
+.pub-links {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.pub-link {
+    display: inline-block;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 6px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.pub-link:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Experience Section - Using flexbox with gap */
+#experience .container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
 .experience-item {
     background-color: var(--white);
     border: 1px solid var(--border-color);
     border-radius: 8px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
+    padding: var(--spacing-md);
 }
 
 .exp-header {
@@ -262,13 +408,18 @@ h3 {
     line-height: 1.6;
 }
 
-/* Education */
+/* Education Section - Using flexbox with gap */
+#education .container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
 .education-item {
     background-color: var(--white);
     border: 1px solid var(--border-color);
     border-radius: 8px;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
+    padding: var(--spacing-md);
 }
 
 .edu-header {
@@ -280,7 +431,7 @@ h3 {
 .education-item h4 {
     font-size: 1.25rem;
     color: var(--text-dark);
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--spacing-xs);
 }
 
 .school {
@@ -299,23 +450,23 @@ h3 {
     background-color: var(--white);
     border: 1px solid var(--border-color);
     border-radius: 8px;
-    padding: 2rem;
+    padding: var(--spacing-lg);
 }
 
 .skills-section h3 {
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--spacing-md);
 }
 
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
+    gap: var(--spacing-md);
 }
 
 .skill-category h4 {
     color: var(--text-dark);
     font-size: 1rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--spacing-xs);
 }
 
 .skill-category p {
@@ -330,14 +481,14 @@ h3 {
 
 #contact p {
     color: var(--text-light);
-    margin-bottom: 2rem;
+    margin-bottom: var(--spacing-lg);
     font-size: 1.1rem;
 }
 
 .contact-links {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: var(--spacing-lg);
     flex-wrap: wrap;
 }
 
@@ -361,7 +512,7 @@ footer {
     background-color: var(--text-dark);
     color: var(--white);
     text-align: center;
-    padding: 2rem 0;
+    padding: var(--spacing-lg) 0;
 }
 
 /* Responsive Design */
@@ -381,20 +532,28 @@ footer {
     }
 
     .exp-header,
-    .edu-header {
+    .edu-header,
+    .pub-header {
         flex-direction: column;
     }
 
-    .date {
-        margin-top: 0.5rem;
+    .date,
+    .pub-badge {
+        margin-top: var(--spacing-xs);
     }
 
     .nav-links {
-        gap: 1rem;
+        gap: var(--spacing-sm);
+        flex-wrap: wrap;
+    }
+
+    .nav-links .resume-link {
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
     }
 
     .menu-bar a {
-        padding: 0.5rem 0.75rem;
+        padding: var(--spacing-xs) 0.75rem;
         font-size: 0.9rem;
     }
 
@@ -404,5 +563,10 @@ footer {
 
     .subtitle {
         font-size: 1.1rem;
+    }
+
+    .cta-button {
+        width: 100%;
+        text-align: center;
     }
 }
