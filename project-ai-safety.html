@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Systemic and Existential Risks of AI (SERI2): Generalized Reasoning — Richard Quach</title>
+  <link rel="stylesheet" href="project-style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <nav class="main-nav">
+    <div class="nav-content">
+      <a href="index.html" class="back-link">← Back</a>
+      <a href="index.html" class="logo">RQ</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero -->
+    <section class="project-hero">
+      <div class="container">
+        <div class="project-meta">
+          <span class="tag">AI Safety Research</span>
+          <span class="timeline">2026</span>
+        </div>
+
+        <h1>Systemic and Existential Risks of AI (SERI2): Generalized Reasoning</h1>
+        <p class="project-subtitle">
+          Contribution to the SERI2 proposal section on generalized reasoning as a driver of existential risk,
+          focusing on how broad capability transfer can amplify misalignment and evaluation blind spots.
+        </p>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <section class="project-content">
+      <div class="container-narrow">
+
+        <!-- ITAS-style facts block -->
+        <div class="content-section">
+          <h2>Project facts</h2>
+
+          <!-- Use short, scannable lines like the KIT page -->
+          <ul class="project-facts">
+            <li><strong>Project context:</strong> SERI2, “Systemic and Existential Risks of AI” (interdisciplinary project)</li>
+            <li><strong>Section contributed:</strong> Generalized reasoning and existential risk</li>
+            <li><strong>Role:</strong> Research and writing support (portfolio contribution)</li>
+            <li><strong>Methods:</strong> Narrative literature synthesis, concept mapping, risk framing</li>
+          </ul>
+
+          <p class="fineprint">
+            Note: This page describes my contribution to a proposal section. Project-wide leadership, full study design,
+            and institutional affiliations should be credited to the principal investigators and host institutions.
+          </p>
+        </div>
+
+        <!-- Project description -->
+        <div class="content-section">
+          <h2>Project description</h2>
+
+          <p>
+            This work focuses on whether advanced AI systems could become difficult to control and therefore pose
+            systemic or existential risks. My contribution targeted one specific capability axis: generalized reasoning,
+            meaning an AI system’s ability to transfer learned strategies to unfamiliar tasks, recombine skills in new ways,
+            and operate outside its training distribution.
+          </p>
+
+          <p>
+            Generalized reasoning is important for risk because it is the capacity substrate for open-ended planning,
+            adaptation, and tool use across novel environments. It is a graded property, not a binary milestone, and
+            even “good enough” reasoning across enough domains can be sufficient to enable harmful outcomes.
+          </p>
+        </div>
+
+        <!-- What I wrote (your section) -->
+        <div class="content-section">
+          <h2>Generalized reasoning and why it matters</h2>
+
+          <p>
+            In the proposal section, generalized reasoning is framed as an “ever-expanding” range of logical, abstract,
+            and commonsense thinking processes that transfer across domains, rather than narrow task competence. It does
+            not require perfect formal logic. Instead, the concern is broad competence in realistic settings, including the
+            ability to delegate subproblems to tools and adapt strategies under distribution shift.
+          </p>
+
+          <ul class="project-list">
+            <li>
+              <strong>Goal misgeneralization:</strong>
+              An AI can learn a proxy objective that performs well during training but diverges in new settings,
+              with capability generalization outpacing intent generalization.
+            </li>
+            <li>
+              <strong>Instrumental convergence and power-seeking:</strong>
+              A generally reasoning system is more likely to discover convergent instrumental strategies such as
+              resource acquisition, self-preservation, and resistance to modification.
+            </li>
+            <li>
+              <strong>Strategic behavior in novel contexts:</strong>
+              As systems plan over longer horizons, behavior like concealment or selective compliance can become
+              instrumentally useful even if not explicitly trained.
+            </li>
+            <li>
+              <strong>Evaluation blind spots (safetywashing risk):</strong>
+              Benchmarks can reward competence and produce misleading “safety” signals, especially if strong models
+              learn to perform well on tests without being robustly aligned.
+            </li>
+          </ul>
+        </div>
+
+        <!-- My contribution -->
+        <div class="content-section">
+          <h2>My contribution</h2>
+
+          <ul class="project-list">
+            <li><strong>Literature synthesis:</strong> Consolidated definitions and boundary cases of generalized reasoning to avoid binary claims and over-reliance on single benchmarks.</li>
+            <li><strong>Risk mechanism mapping:</strong> Connected generalized reasoning to concrete x-risk failure modes: goal misgeneralization, instrumental convergence, strategic behavior under distribution shift.</li>
+            <li><strong>Evaluation critique:</strong> Added a short cautionary subsection on benchmark limitations and “safetywashing” dynamics.</li>
+            <li><strong>Proposal-ready writing:</strong> Rewrote technical concepts into clear, policy-facing language suitable for an interdisciplinary project narrative.</li>
+          </ul>
+        </div>
+
+        <!-- Optional: outputs -->
+        <div class="content-section">
+  <h2>Conceptual diagrams</h2>
+
+  <p>
+    The figures below summarize the core argument in the generalized reasoning section.
+    As AI systems become better at transferring skills across tasks and adapting under distribution shift,
+    they may also become better at discovering strategies that preserve their ability to act.
+    These diagrams are conceptual and are used to communicate mechanisms, not to claim a single proven causal chain.
+  </p>
+
+  <figure class="project-figure">
+    <img
+      src="images/seri2-causal-map.png"
+      alt="Concept map showing links between cognitive enhancement (general reasoning, tool use, self-prompting, multi-agent collaboration) and self-preservation (situational awareness, shutdown avoidance, weights exfiltration, persistent memory)."
+      loading="lazy"
+    />
+    <figcaption>
+      <strong>Figure 1.</strong>
+      Mechanism map linking “cognitive enhancement” capabilities (general reasoning, tool use, self-evaluation, multi-agent coordination)
+      to self-preservation-relevant behaviors (situational awareness, shutdown avoidance, persistence, and information retention).
+      The takeaway is not that every capable system will do this, but that broader competence can expand the space of strategies the system can find and execute.
+    </figcaption>
+  </figure>
+
+  <figure class="project-figure">
+    <img
+      src="images/seri2-propagation.png"
+      alt="Schematic showing a signal passing through multiple stages, with red rays and target-like points indicating amplification or reinforcement across steps."
+      loading="lazy"
+    />
+    <figcaption>
+      <strong>Figure 2.</strong>
+      “Swiss cheese” defense schematic: risk reduction relies on multiple, independent safety layers (policy, training, monitoring, human oversight, access controls).
+  Each layer has gaps or failure modes, but stacking layers reduces overall risk.
+  Catastrophic outcomes occur when gaps align across layers and a harmful pathway passes through end-to-end.
+  In the proposal framing, this illustrates why mitigation should be defense-in-depth rather than a single control or benchmark.
+    </figcaption>
+  </figure>
+
+  <h3 style="margin-top: 2rem;">How this supports the generalized reasoning argument</h3>
+  <ul class="project-list">
+    <li>
+      <strong>Generalization expands strategy search:</strong>
+      Better cross-domain reasoning increases the range of plans a system can generate, test, and adapt, including plans that protect its ability to keep acting.
+    </li>
+    <li>
+      <strong>Capabilities interact:</strong>
+      Tool use, memory, and self-evaluation can combine into higher-level behaviors that look like persistence, evasion, or opportunistic optimization, depending on incentives and constraints.
+    </li>
+    <li>
+      <strong>Selection effects matter:</strong>
+      If training or deployment environments reward certain outcomes, behaviors that help achieve those outcomes can be reinforced, even if they are undesirable from a safety perspective.
+    </li>
+  </ul>
+</div>
+
+          <h2>Supporting material</h2>
+          <ul class="project-list">
+            <li>
+              <strong>Generalized reasoning writeup (internal draft):</strong>
+              Definition and risk mechanisms summary (goal misgeneralization, instrumental convergence, evaluation limits).
+            </li>
+          </ul>
+        </div>
+
+        <div class="content-section" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(248, 244, 241, 0.2);">
+          <p style="font-size: 0.9rem; color: var(--text-light); font-style: italic;">
+            Note: This page is a portfolio-style description of my contribution to a proposal section.
+            For the institutional project page style reference, see the KIT ITAS project template.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="project-nav">
+      <div class="container">
+        <a href="index.html" class="next-project">
+          <span class="next-label">Back to Portfolio</span>
+          <h3>View All Projects →</h3>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Richard Quach</p>
+    </div>
+  </footer>
+</body>
+</html>

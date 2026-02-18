@@ -3,313 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Richard Quach</title>
+    <title>Richard Quach — Public Health Researcher</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <a href="#" class="logo">Richard Quach</a>
+    <nav class="main-nav">
+        <div class="nav-content">
+            <a href="#" class="logo">RQ</a>
             <div class="nav-links">
-                <a href="files/resume.pdf" target="_blank" class="resume-link">📄 Resume</a>
-                <a href="mailto:quachr@bu.edu">Email</a>
-                <a href="https://github.com/quachrich" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/richard-quach-64b64a212" target="_blank">LinkedIn</a>
+                <a href="#work">Work</a>
+                <a href="#writing">Writing</a>
+                <a href="#about">About</a>
+                <a href="files/resume.pdf" class="nav-cta">Resume</a>
             </div>
         </div>
     </nav>
 
-    <div class="menu-bar">
-        <a href="#home">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#publications">Publications</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-    </div>
-
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="profile-section">
-                <img src="images/profile.jpeg" alt="Richard Quach" class="profile-img">
-                <div class="profile-text">
-                    <h1>Hi! 👋 I'm Richard Quach</h1>
-                    <p class="subtitle">Health Science Student | Data Science Researcher | Public Health Enthusiast</p>
-                    <p>I'm a recent graduate from Boston University's Sargent College with a B.S. in Health Science and a minor in Data Science. I'm passionate about leveraging AI and data science to address critical challenges in public health, biosecurity, and clinical research.</p>
-                    <p>My work spans clinical data research for AI-powered health applications, infectious disease surveillance systems, and AI safety in healthcare contexts. I'm particularly interested in the intersection of machine learning, epidemiology, and health policy.</p>
-                    <div class="hero-cta">
-                        <a href="files/resume.pdf" target="_blank" class="cta-button">Download Resume</a>
-                    </div>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Richard Quach</h1>
+                <p class="hero-subtitle">Public health researcher working at the intersection of AI, biosecurity, and infectious disease surveillance</p>
+                <div class="hero-meta">
+                    <span>Based in Philadelphia</span>
+                    <span>•</span>
+                    <span>Recent grad from Boston University</span>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            
-            <!-- Public Health & Biosecurity Category -->
-            <div class="project-category">
-                <h3 class="category-title">Public Health & Biosecurity</h3>
+        <section id="work" class="work-section">
+            <div class="container">
+                <h2 class="section-title">Selected Work</h2>
                 
-                <div class="project-card">
-                    <img src="images/project-epistorm.png" alt="EPISTORM Project" class="project-img">
-                    <div class="project-content">
-                        <h4>CDC EPISTORM: Infectious Disease Surveillance</h4>
-                        <p>Contributed to a $17.5M CDC-funded initiative to enhance infectious disease response capabilities across the United States. Designed and implemented contact tracing surveys in REDCap for NIH research on AGE and ARI transmission patterns among 1,000+ contacts.</p>
-                        <p class="tech-stack">Tech Stack: REDCap, Python, Data Visualization</p>
-                        <a href="#" class="project-link">View Project →</a>
-                    </div>
-                </div>
+                <div class="work-grid">
 
-                <div class="project-card">
-                    <img src="images/project-tb.png" alt="TB in Prisons" class="project-img">
-                    <div class="project-content">
-                        <h4>TB Surveillance in Prison Populations</h4>
-                        <p>Analyzed 100,000+ data points on tuberculosis cases in prison populations across the Americas. Developed Python visualizations to track temporal and geographic trends, contributing to evidence-based policy recommendations for correctional health systems.</p>
-                        <p class="tech-stack">Tech Stack: Python, Pandas, Matplotlib, Data Analysis</p>
-                        <a href="#" class="project-link">View Project →</a>
-                    </div>
-                </div>
+                    <a href="project-ai-safety.html" class="work-card">
+                        <div class="work-card-header">
+                            <span class="work-tag">AI Safety</span>
+                            <span class="work-year">2026</span>
+                        </div>
+                        <h3>Systemic and Existential Risks of AI (SERI2): Generalized Reasoning</h3>
+                        <p>Contribution to the SERI2 proposal section on generalized reasoning as a driver of existential risk, focusing on how broad capability transfer can amplify misalignment and evaluation blind spots.</p>
+                        <span class="work-link-text">View project →</span>
+                    </a>
 
-                <div class="project-card">
-                    <img src="images/project-vaccine.png" alt="COVID-19 Vaccine Access" class="project-img">
-                    <div class="project-content">
-                        <h4>COVID-19 Vaccine Access for AAPI Communities</h4>
-                        <p>Built an information hub mapping 100+ vaccination sites with multilingual support for Philadelphia's AAPI immigrant communities. Coordinated vaccination of 1,000+ individuals and created 7+ culturally-tailored educational materials.</p>
-                        <p class="tech-stack">Community Health | Health Equity | Multilingual Outreach</p>
-                        <a href="#" class="project-link">View Project →</a>
+                    <a href="project-epistorm.html" class="work-card">
+                        <div class="work-card-header">
+                            <span class="work-tag">Biosecurity</span>
+                            <span class="work-year">2023—2025</span>
+                        </div>
+                        <h3>CDC EPISTORM Project</h3>
+                        <p>Designing contact tracing systems for infectious disease surveillance across 1,000+ contacts as part of a $17.5M federal initiative</p>
+                        <span class="work-link-text">View project →</span>
+                    </a>
+                    
+                    <a href="project-peer-review.html" class="work-card">
+                        <div class="work-card-header">
+                            <span class="work-tag">AI Safety</span>
+                            <span class="work-year">2025</span>
+                        </div>
+                        <h3>AI Peer Review</h3>
+                        <p>Undergraduate research at Harvard Medical School's MJ Lab examining how large language models can support PhD paper review, detect errors in published literature, and enhance academic writing quality. </p>
+                        <span class="work-link-text">View project →</span>
+                    </a>
+
+                    <a href="project-tb.html" class="work-card">
+                        <div class="work-card-header">
+                            <span class="work-tag">Data Science</span>
+                            <span class="work-year">2024</span>
+                        </div>
+                        <h3>TB in Prison Populations</h3>
+                        <p>Analyzed 100,000+ data points to track tuberculosis trends across the Americas, creating evidence for correctional health policy</p>
+                        <span class="work-link-text">View project →</span>
+                    </a>
+
+                    <a href="project-alevrio.html" class="work-card">
+                        <div class="work-card-header">
+                            <span class="work-tag">Clinical AI</span>
+                            <span class="work-year">2024</span>
+                        </div>
+                        <h3>Food Allergy AI Development</h3>
+                        <p>Extracted 200+ clinical datasets from peer-reviewed literature to train AI models for food allergy management applications</p>
+                        <span class="work-link-text">View project →</span>
+                    </a>
+
+                    <a href="project-vaccine.html" class="work-card">
+                        <div class="work-card-header">
+                            <span class="work-tag">Community Health</span>
+                            <span class="work-year">2021—2022</span>
+                        </div>
+                        <h3>COVID-19 Vaccine Access</h3>
+                        <p>Coordinated vaccination of 1,000+ people in Philadelphia's AAPI community, building multilingual information infrastructure</p>
+                        <span class="work-link-text">View project →</span>
+                    </a>
+
+                    <div class="work-card work-card-wip">
+                        <div class="work-card-header">
+                            <span class="work-tag">Research</span>
+                            <span class="work-year">In Progress</span>
+                        </div>
+                        <h3>Embedding-Based Research Discovery</h3>
+                        <p>Using high-dimensional embeddings to identify unexplored research directions by analyzing gaps between scientific paper clusters</p>
+                        <span class="work-link-text">Coming soon</span>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- AI Related Work Category -->
-            <div class="project-category">
-                <h3 class="category-title">AI Related Work</h3>
+        <section id="writing" class="writing-section">
+            <div class="container">
+                <h2 class="section-title">Writing & Publications</h2>
                 
-                <div class="project-card">
-                    <img src="images/AI-Safety.png" alt="AI Safety" class="project-img">
-                    <div class="project-content">
-                        <h4>AI Safety Generalized Reasoning</h4>
-                        <p>Discussing and helping write part of an X-Risk Countermeasure paper focused on AI safety and generalized reasoning capabilities. Contributing to research on mitigating existential risks from advanced AI systems.</p>
-                        <p class="tech-stack">AI/ML | Research | X-Risk</p>
-                        <a href="#" class="project-link">View Project →</a>
-                    </div>
-                </div>
+                <div class="writing-list">
+                    <a href="files/paper1.pdf" target="_blank" class="writing-item">
+                        <div class="writing-header">
+                            <h3>Generalized Reasoning and Existential Risk in AI</h3>
+                            <span class="writing-year">2025</span>
+                        </div>
+                        <p class="writing-venue">KIT Paper (In Progress)</p>
+                        <p class="writing-desc">Examining the intersection of advanced AI capabilities and existential risk mitigation strategies</p>
+                    </a>
 
-                <div class="project-card">
-                    <img src="images/project-alevrio.png" alt="Alevrio AI" class="project-img">
-                    <div class="project-content">
-                        <h4>Clinical AI for Food Allergy Management</h4>
-                        <p>Extracted clinical and nutritional data from peer-reviewed literature to support AI model development for food allergy applications. Processed restaurant menu PDFs, cleaned data, and organized nutritional information into structured Excel databases. Collaborated with AI engineers to identify data gaps and improve recommendation algorithm accuracy.</p>
-                        <p class="tech-stack">Clinical Data | AI/ML | Nutrition Science | Data Processing</p>
-                        <a href="#" class="project-link">View Project →</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="images/project-chatgpt.png" alt="ChatGPT Research" class="project-img">
-                    <div class="project-content">
-                        <h4>ChatGPT in Academic Peer Review</h4>
-                        <p>Analyzed 50+ studies evaluating ChatGPT's effectiveness in supporting PhD paper reviews at Harvard Medical School. Investigated AI's role in enhancing academic writing quality and developed standardized processes for error detection in peer-reviewed papers.</p>
-                        <p class="tech-stack">LLMs | Research Integrity | AI Safety</p>
-                        <a href="#" class="project-link">View Project →</a>
-                    </div>
+                    <a href="files/paper2.pdf" target="_blank" class="writing-item">
+                        <div class="writing-header">
+                            <h3>Tradition in Transition: Rethinking Wet Markets in Modern African Societies</h3>
+                            <span class="writing-year">2024</span>
+                        </div>
+                        <p class="writing-venue">International Relations Review</p>
+                        <p class="writing-desc">Analyzing the role of traditional markets in contemporary public health and economic systems</p>
+                    </a>
                 </div>
             </div>
+        </section>
 
-            <!-- In-Process Projects Category -->
-            <div class="project-category in-process">
-                <h3 class="category-title">In-Process Projects 🚧</h3>
-                
-                <div class="project-card">
-                    <img src="images/project-placeholder.png" alt="Coming Soon" class="project-img">
-                    <div class="project-content">
-                        <h4>Project Title Coming Soon</h4>
-                        <p>Currently working on exciting new projects in AI safety, public health, and data science. Check back soon for updates!</p>
-                        <p class="tech-stack">Coming Soon</p>
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title">About</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>I recently graduated from Boston University with a B.S. in Health Science and a minor in Data Science. My work focuses on using computational approaches to address critical challenges in public health and biosecurity.</p>
+                        
+                        <p>I've contributed to federal infectious disease surveillance initiatives, researched AI safety in healthcare contexts, and worked on community health interventions. I'm particularly interested in how machine learning and epidemiology can inform better health policy.</p>
+
+                        <p>Currently exploring opportunities in biosecurity research, AI safety, and public health operations.</p>
                     </div>
-                </div>
-            </div>
+                    
+                    <div class="about-details">
+                        <div class="detail-section">
+                            <h4>Skills</h4>
+                            <ul>
+                                <li>Python, R, SQL</li>
+                                <li>REDCap, Qualtrics</li>
+                                <li>Data visualization & analysis</li>
+                                <li>IRB protocol development</li>
+                                <li>Literature review & synthesis</li>
+                            </ul>
+                        </div>
 
-            <!-- Miscellaneous Category -->
-            <div class="project-category">
-                <h3 class="category-title">Miscellaneous</h3>
-                
-                <div class="project-card">
-                    <img src="images/project-antibiotic.png" alt="Antibiotic Resistance" class="project-img">
-                    <div class="project-content">
-                        <h4>Antibiotic Resistance in Charles River Bacteria</h4>
-                        <p>Investigated 20+ bacterial species from the Charles River to assess antibiotic resistance patterns. Followed aseptic technique and BSL-1/BSL-2 protocols, maintaining compliance with GMP, SOPs, and GDP standards.</p>
-                        <p class="tech-stack">Microbiology | Laboratory Research | Environmental Health</p>
-                        <a href="#" class="project-link">View Project →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                        <div class="detail-section">
+                            <h4>Interests</h4>
+                            <ul>
+                                <li>Biosecurity & pandemic preparedness</li>
+                                <li>AI safety in healthcare</li>
+                                <li>Infectious disease modeling</li>
+                                <li>Health policy & equity</li>
+                            </ul>
+                        </div>
 
-    <section id="publications">
-        <div class="container">
-            <h2>Publications</h2>
-            
-            <div class="publication-item">
-                <div class="pub-header">
-                    <h4>Global Health Diplomacy and African Health Systems</h4>
-                    <span class="pub-badge">Published</span>
-                </div>
-                <p class="journal">International Relations Review</p>
-                <p class="pub-description">Examining the intersection of global health policy and international relations with focus on African health systems and diplomatic approaches to health security.</p>
-                <div class="pub-links">
-                    <a href="files/paper1.pdf" target="_blank" class="pub-link">📄 Read Paper</a>
-                </div>
-            </div>
-
-            <div class="publication-item">
-                <div class="pub-header">
-                    <h4>Public Health Policy in International Context</h4>
-                    <span class="pub-badge">Published</span>
-                </div>
-                <p class="journal">International Relations Review</p>
-                <p class="pub-description">Analysis of public health policy development and implementation across different geopolitical contexts and their impact on global health outcomes.</p>
-                <div class="pub-links">
-                    <a href="files/paper2.pdf" target="_blank" class="pub-link">📄 Read Paper</a>
-                </div>
-            </div>
-
-            <div class="publication-item">
-                <div class="pub-header">
-                    <h4>Health Security and Global Governance</h4>
-                    <span class="pub-badge">Published</span>
-                </div>
-                <p class="journal">International Relations Review</p>
-                <p class="pub-description">Exploring the role of international organizations and governance structures in addressing global health security challenges and pandemic preparedness.</p>
-                <div class="pub-links">
-                    <a href="files/paper3.pdf" target="_blank" class="pub-link">📄 Read Paper</a>
-                </div>
-            </div>
-
-            <div class="publication-item">
-                <div class="pub-header">
-                    <h4>Foreign Policy and Health Diplomacy</h4>
-                    <span class="pub-badge">Published</span>
-                </div>
-                <p class="journal">International Relations Review</p>
-                <p class="pub-description">Investigating how foreign policy decisions impact health diplomacy and the effectiveness of international health cooperation initiatives.</p>
-                <div class="pub-links">
-                    <a href="files/paper4.pdf" target="_blank" class="pub-link">📄 Read Paper</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="experience">
-        <div class="container">
-            <h2>Experience</h2>
-            
-            <div class="experience-item">
-                <div class="exp-header">
-                    <div>
-                        <h4>Clinical Data Research Intern</h4>
-                        <p class="company">Alevrio (Remote)</p>
-                    </div>
-                    <p class="date">June 2024 – December 2024</p>
-                </div>
-                <p>Supporting AI model development for food allergy and nutrition health applications through clinical data extraction and research.</p>
-            </div>
-
-            <div class="experience-item">
-                <div class="exp-header">
-                    <div>
-                        <h4>Undergraduate Researcher</h4>
-                        <p class="company">Harvard Medical School - MJ Lab</p>
-                    </div>
-                    <p class="date">December 2024 – May 2025</p>
-                </div>
-                <p>Analyzed AI's role in academic peer review and developed standardized error detection processes for retracted papers.</p>
-            </div>
-
-            <div class="experience-item">
-                <div class="exp-header">
-                    <div>
-                        <h4>Executive Assistant</h4>
-                        <p class="company">Accesso Care (Philadelphia, PA)</p>
-                    </div>
-                    <p class="date">May 2024 – August 2024</p>
-                </div>
-                <p>Led early-stage startup operations for CNA staffing agency, drafted policy briefs, and conducted community outreach.</p>
-            </div>
-
-            <div class="experience-item">
-                <div class="exp-header">
-                    <div>
-                        <h4>Undergraduate Researcher</h4>
-                        <p class="company">Boston University School of Public Health</p>
-                    </div>
-                    <p class="date">September 2023 – January 2025</p>
-                </div>
-                <p>CDC EPISTORM project researcher working on infectious disease surveillance tools and TB prison population analysis.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="education">
-        <div class="container">
-            <h2>Education</h2>
-            
-            <div class="education-item">
-                <div class="edu-header">
-                    <div>
-                        <h4>Bachelor of Science in Health Science</h4>
-                        <p class="school">Boston University - Sargent College of Health and Rehabilitation Sciences</p>
-                        <p class="minor">Minor in Data Science</p>
-                    </div>
-                    <p class="date">Expected May 2025</p>
-                </div>
-            </div>
-
-            <div class="skills-section">
-                <h3>Skills</h3>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h4>Programming</h4>
-                        <p>Python, R, SQL, Rust</p>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Data Tools</h4>
-                        <p>REDCap, Pandas, Matplotlib</p>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Laboratory</h4>
-                        <p>Aseptic technique, PCR, Microscopy, GMP/SOP</p>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Interests</h4>
-                        <p>International Politics, Health Policy, AI Safety</p>
+                        <div class="detail-section">
+                            <h4>Contact</h4>
+                            <ul>
+                                <li><a href="mailto:quachr42636@gmail.com">Email</a></li>
+                                <li><a href="https://www.linkedin.com/in/richard-quach-64b64a212" target="_blank">LinkedIn</a></li>
+                                <li><a href="https://github.com/quachrich" target="_blank">GitHub</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <p>I'm always interested in discussing public health research, AI safety in healthcare, or potential collaborations. Feel free to reach out!</p>
-            <div class="contact-links">
-                <a href="mailto:quachr@bu.edu" class="contact-link">Email</a>
-                <a href="https://github.com/quachrich" target="_blank" class="contact-link">GitHub</a>
-                <a href="https://www.linkedin.com/in/richard-quach-64b64a212" target="_blank" class="contact-link">LinkedIn</a>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2025 Richard Quach. All rights reserved.</p>
+        <div class="container">
+            <p>© 2025 Richard Quach</p>
+        </div>
     </footer>
 </body>
 </html>
